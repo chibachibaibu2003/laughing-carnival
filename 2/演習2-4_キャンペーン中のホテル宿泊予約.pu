@@ -1,0 +1,7 @@
+@startuml ユースケース図
+    rectangle 予約システム{
+        usecase (キャンペーン価格にする) as text
+        usecase (<u>予約する</u>\n extention points\n キャンペーン期間)  as text1
+    }
+    text .> (text1) : <<extend>>
+@enduml

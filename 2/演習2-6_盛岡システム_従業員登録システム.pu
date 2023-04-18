@@ -1,0 +1,19 @@
+@startuml ユースケース図
+    left to right direction
+    actor 人事担当者#DDDDDD;line:black;line.bold;
+    actor 社員#DDDDDD;line:black;line.bold;
+    rectangle 従業員登録システム{
+        usecase (社員情報の登録) as text1
+        usecase (社員情報の取得) as text2
+    }
+    rectangle 社員情報の変更{
+        usecase (変更届の提出) as text3
+        usecase (変更届の確認) as text4
+        usecase (社員情報の修正) as text5
+    }
+    text1<--人事担当者
+    社員--> text2
+    社員-->text3
+    text4<--人事担当者
+    text5<--人事担当者
+@enduml

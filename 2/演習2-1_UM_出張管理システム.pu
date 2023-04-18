@@ -1,0 +1,25 @@
+@startuml 演習2-1
+    left to right direction
+    actor 申請者#DDDDDD;line:black;line.bold;
+    actor 承認者#DDDDDD;line:black;line.bold;
+    actor 経理担当者#DDDDDD;line:black;line.bold;
+    actor 交通費精算システム#DDDDDD;line:black;line.bold;
+    rectangle 出張申請システム{
+        usecase (出張申請を登録する) as text1
+        usecase (出張申請を提出する) as text2
+        usecase (出張申請を承認する) as text3
+        usecase (出張申請を却下する) as text4
+        usecase (出張申請を差し戻す) as text5
+        usecase (出張申請を確認する) as text6
+    }
+    申請者-->text1
+    申請者-->text2
+    承認者-->text3
+    承認者-->text4
+    承認者-->text5
+    経理担当者-->text6
+    text1<--交通費精算システム
+@enduml
+
+
+    
