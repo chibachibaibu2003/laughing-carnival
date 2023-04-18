@@ -17,6 +17,7 @@
     承認者-->text3
     承認者-->text4
     承認者-->text5
+    承認者-->text6
     経理担当者-->text6
     text1<--交通費精算システム
 @enduml
