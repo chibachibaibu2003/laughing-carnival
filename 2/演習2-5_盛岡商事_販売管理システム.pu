@@ -1,11 +1,11 @@
 @startuml ユースケース図
     left to right direction
-    actor 田中さん#DDDDDD;line:black;line.bold;
-    actor 鈴木さん#DDDDDD;line:black;line.bold;
+    actor 注文確認係 as person1#DDDDDD;line:black;line.bold; 
+    actor 出荷状況確認係 as person2#DDDDDD;line:black;line.bold; 
     rectangle 販売管理システム{
         usecase (注文商品を確認) as text1
         usecase (出荷状況を登録) as text2
     }
-    田中さん-->text1
-    鈴木さん-->text2
+    person1-->text1
+    person2-->text2
 @enduml
