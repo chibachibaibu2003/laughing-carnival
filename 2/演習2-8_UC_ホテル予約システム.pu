@@ -1,0 +1,7 @@
+@startuml ユースケース図
+    left to right direction
+    actor 利用者#DDDDDD;line:black;line.bold;
+    actor ホテル従業員#DDDDDD;line:black;line.bold;
+    actor ホテル管理者#DDDDDD;line:black;line.bold;
+    rectangle ホテル予約システム
+@enduml

@@ -1,7 +1,11 @@
 @startuml ユースケース図
+    actor 利用者#DDDDDD;line:black;line.bold;
     rectangle 予約システム{
         usecase (キャンペーン価格にする) as text
+        usecase ログインする
         usecase (<u>予約する</u>\n extention points\n キャンペーン期間)  as text1
     }
     text .> (text1) : <<extend>>
+    ログインする<.. text1 : <<include>>
+    利用者->text1
 @enduml
