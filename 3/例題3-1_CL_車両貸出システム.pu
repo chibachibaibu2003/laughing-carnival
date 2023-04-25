@@ -16,7 +16,6 @@
     }
     class 空車リスト{
         -車種:String
-        -希望日:int
     }
 
     class 貸出{
