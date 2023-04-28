@@ -1,0 +1,6 @@
+@startuml アクター
+    actor 正社員 as person#DDDDDD;line:black;line.bold;
+    actor 派遣 as person2#DDDDDD;line:black;line.bold;
+    actor 契約社員 as person3#DDDDDD;line:black;line.bold;
+    
+@enduml

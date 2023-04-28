@@ -1,0 +1,7 @@
+@startuml ユースケース
+    left to right direction
+    パソコン"1" *-- ハードディスク
+    note left of パソコン
+    ハードディスクがないと成り立ちません。
+    end note
+@enduml
