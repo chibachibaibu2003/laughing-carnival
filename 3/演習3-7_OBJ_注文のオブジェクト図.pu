@@ -32,6 +32,7 @@ object "<u>商品2:商品" as product3{
 商品名=冷蔵庫
 型式=R8765
 }
+
 object "<u>商品2:商品" as product4{
 商品名=冷蔵庫
 型式=R8765
