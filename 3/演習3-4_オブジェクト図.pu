@@ -1,4 +1,3 @@
-
 @startuml ユースケース図
 left to right direction
 object "<u>車1: 車" as car {
