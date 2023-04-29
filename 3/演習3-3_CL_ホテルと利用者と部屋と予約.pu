@@ -1,0 +1,24 @@
+@startuml 演習3-3
+class "利用者" as user {
+- 名前
+- 住所
+- 電話番号
+}
+class "ホテル" as hottel{
+- 部屋
+}
+class "部屋" as room {
+- タイプ
+- 価格
+- キャンペーン価格
+}
+class "予約" as yoyaku {
+- チェックイン日
+- 滞在期間
+- 値段
+}
+hottel "1" *--"*" room
+hottel "1" o-- "*" user
+yoyaku "*" -- "1" user
+yoyaku "1" -- "1" room
+@enduml

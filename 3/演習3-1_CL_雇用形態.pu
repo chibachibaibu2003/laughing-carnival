@@ -1,6 +1,13 @@
 @startuml アクター
-    actor 正社員 as person#DDDDDD;line:black;line.bold;
-    actor 派遣 as person2#DDDDDD;line:black;line.bold;
-    actor 契約社員 as person3#DDDDDD;line:black;line.bold;
-    
+    class 従業員{
+    }
+    class 正社員{
+    }
+    class 派遣{
+    }
+    class 契約社員{
+    }
+    従業員<|--正社員
+    従業員<|--派遣
+    従業員<|--契約社員
 @enduml
