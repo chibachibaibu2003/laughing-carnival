@@ -4,6 +4,7 @@
     skinparam style strictuml
     actor "<u>:客</u>" as custmer
 
+    mainframe sd ラーメン屋さん
     participant "<u> :フロア店員</u>" as clerk
     participant "<u> :料理人</u>"  as cook
     activate custmer
