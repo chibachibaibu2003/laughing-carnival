@@ -1,0 +1,18 @@
+@startuml 演習4-2
+    hide footbox
+    skinparam style strictuml
+
+    participant "<u>user:利用者</u>" as boundary
+    participant ":<u>予約画面</u>" as control
+
+    mainframe sd 利用者と予約画面
+
+    activate boundary
+        boundary-->control: ログインする()
+        
+        activate control
+            control->control:認証()
+            activate control
+        deactivate control
+    deactivate boundary
+@enduml

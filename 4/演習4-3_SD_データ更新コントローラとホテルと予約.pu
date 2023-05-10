@@ -1,0 +1,21 @@
+@startuml 演習4-3
+    hide footbox
+    skinparam style strictuml
+
+    participant "controller:データ更新コントローラー" as controll
+    participant "hotel:ホテル" as hotel
+
+    mainframe sd ホテル予約
+
+    activate controll
+        controll->hotel: 予約登録()
+        activate hotel
+            create ":<u>予約</u>" as entity
+            hotel-->entity: 生成() <<create>>
+            hotel->hotel: 予約登録(予約情報)
+            activate hotel
+            deactivate hotel
+            controll <-- hotel: 予約結果
+        deactivate hotel
+    deactivate controll
+@enduml

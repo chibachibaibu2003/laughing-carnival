@@ -1,0 +1,33 @@
+@startuml 演習4-4
+    hide footbox
+    skinparam style strictuml
+    actor ":<u>受注係</u>" as person
+    participant "<<boundary>>\n :<u>注文登録画面</u>" as boundary
+    participant "<<entity>>\n :<U>商品</u>" as product
+
+    mainframe sd 商品注文
+        activate person
+            person->boundary: 商品情報確認() 
+            activate product
+                
+                activate boundary
+                    boundary->product: 商品情報確認()
+                    boundary<--product:　商品情報
+            deactivate product
+                    boundary->boundary: 商品情報表示(商品情報)
+                    activate boundary
+                    deactivate boundary
+                    person<--boundary: 商品情報 
+                deactivate boundary
+            
+            person->boundary: 商品登録(注文情報)
+            activate boundary
+                create "<<entity>>\n :<u>注文</u>" as order
+                boundary-->order: <<create>>\n商品情報(注文情報)
+                activate order
+                deactivate order
+                person<--boundary: 商品登録通知
+            deactivate boundary            
+            
+        deactivate person
+@enduml

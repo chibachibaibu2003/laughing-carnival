@@ -1,0 +1,26 @@
+@startuml 演習4-6
+    hide footbox
+    skinparam style strictuml
+
+    actor ":<u>ユーザー</u>" as person
+    participant ":<u>ブラウザ</u>" as browser
+    participant ":<u>Webサーバー</u>" as web
+    participant ":<u>画像サーバー</u>" as photo
+
+    mainframe sd 画像検索
+    activate person
+        person->browser: 画像のリンクを押す
+        activate browser
+            browser->web: 画像検索(ファイル名)
+            activate web
+                web->photo: 検索(ファイル名)
+                activate photo
+                    photo->photo: 画像ファイル検索
+                    web<--photo:画像ファイル
+                deactivate photo
+                browser<--web:画像ファイル
+            deactivate web
+            person<--browser:画像ファイル
+        deactivate browser
+    deactivate person
+@enduml
