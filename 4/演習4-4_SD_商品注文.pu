@@ -23,10 +23,12 @@
             person->boundary: 商品登録(注文情報)
             activate boundary
                 create "<<entity>>\n :<u>注文</u>" as order
-                boundary-->order: <<create>>\n商品情報(注文情報)
+                boundary-->order: 生成() <<create>>
                 activate order
                 deactivate order
-                person<--boundary: 商品登録通知
+                boundary->order: 商品登録(注文情報)
+                boundary<--order: 注文完了通知
+                person<--boundary: 注文完了通知
             deactivate boundary            
             
         deactivate person
