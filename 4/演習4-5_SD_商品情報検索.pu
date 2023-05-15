@@ -1,6 +1,7 @@
 @startuml 演習4-5
     hide footbox
     skinparam style strictuml
+    autonumber
 
     actor ":<u>会員</u>" as person
     participant "<<boundary>>\n :<u>商品検索画面</u>" as boundary
