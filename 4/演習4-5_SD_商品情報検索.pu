@@ -8,7 +8,7 @@
 
     mainframe sd 商品検索
         activate person
-            person->boundary: 商品検索()
+            person->boundary: 商品検索(商品番号)
             activate boundary
                 boundary->control: 商品検索(商品番号)
                 activate control
@@ -17,7 +17,7 @@
                     loop 商品カテゴリ数
                         create "<<entity>>\n :<u>商品カテゴリ</u>" as category
                         control-->category:<<create>> 生成()
-                        control->product: 商品カテゴリを設定する
+                        control->product: 商品カテゴリ設定()
                         activate product
                         deactivate product
                     end loop
@@ -26,7 +26,6 @@
                     activate boundary
                     deactivate boundary 
                 deactivate control
-                person<--boundary: 検索結果
             deactivate boundary
         deactivate person
 @enduml
