@@ -1,8 +1,8 @@
 @startuml 演習6-5-3
-    state 電源SW_OFF状態{
+    state 電源SW_OFF{
 
     }
-    state 電源SW_ON状態{
+    state 電源SW_ON{
         state 左旋回{
 
         }
@@ -14,8 +14,8 @@
     左旋回:右モーター＝ON
     右旋回:左モーター＝ON
     右旋回:右モーター＝OFF
-    電源SW_OFF状態->電源SW_ON状態:　電源スイッチを入れる
-    電源SW_OFF状態<-電源SW_ON状態:　電源スイッチを切る
+    電源SW_OFF->電源SW_ON:　電源スイッチを入れる
+    電源SW_OFF<-電源SW_ON:　電源スイッチを切る
     左旋回->右旋回:　光センサーが暗い
     右旋回->左旋回:　光センサーが明るい
 
