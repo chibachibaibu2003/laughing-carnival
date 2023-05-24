@@ -11,15 +11,11 @@
     activate custmer
         custmer->money :お金を入れる
         activate money
-            custmer<--money :ボタン入力待ち状態
-        deactivate money
-        custmer->button :欲しいドリンクのボタンを押す
-        activate button
-            button->bender :目的のドリンクの排出命令
-        deactivate button
-            activate bender
-                bender->bender :目的のドリンクの排出
-                custmer<--bender :ドリンク
-            deactivate bender           
-    deactivate custmer
+            money->button :お金投入の通知
+            activate button
+                custmer->button: ボタンを押す
+                activate bender
+                    button->bender:　ドリンクの排出命令
+                    bender->bender: 　ドリンクを排出
+                    custmer<--bender: ドリンク
 @enduml
