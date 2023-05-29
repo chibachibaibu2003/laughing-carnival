@@ -12,4 +12,5 @@
     person-->text2
     text1<--bender
     text2<--bender
+    text3<--bender
 @enduml
